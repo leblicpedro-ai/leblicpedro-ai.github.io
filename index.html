@@ -57,10 +57,11 @@
     }
 
     .opener-icon {
-      width: 42px;
-      height: 42px;
+      width: 56px;
+      height: 32px;
       flex-shrink: 0;
       color: var(--verde);
+      display: block;
     }
 
     .brand-text {
@@ -118,18 +119,7 @@
       font-size: 20px;
       color: #3d3d3d;
       max-width: 700px;
-      margin-bottom: 28px;
-    }
-
-    .hero-note {
-      display: inline-block;
-      background: var(--verde-claro);
-      color: var(--verde-oscuro);
-      padding: 12px 16px;
-      border-radius: 999px;
-      font-weight: 700;
       margin-bottom: 34px;
-      font-size: 15px;
     }
 
     .buttons {
@@ -173,9 +163,9 @@
     }
 
     .logo-card .opener-icon {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 28px;
+      width: 140px;
+      height: 76px;
+      margin: 0 auto 28px;
       color: white;
     }
 
@@ -322,16 +312,6 @@
       margin: auto;
     }
 
-    .notice {
-      background: var(--verde-claro);
-      border-left: 5px solid var(--verde);
-      padding: 26px;
-      border-radius: 18px;
-      margin-top: 34px;
-      color: var(--verde-oscuro);
-      font-weight: 700;
-    }
-
     .contact {
       background: var(--verde);
       max-width: none;
@@ -459,11 +439,33 @@
 
   <header>
     <a class="brand" href="#">
-      <svg class="opener-icon" viewBox="0 0 64 64" aria-hidden="true" fill="none">
-        <path d="M23 4H41C47.6 4 53 9.4 53 16C53 24.3 46.3 31 38 31H26C17.7 31 11 24.3 11 16C11 9.4 16.4 4 23 4Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
-        <path d="M24 16C25.8 20.2 28.5 22.3 32 22.3C35.5 22.3 38.2 20.2 40 16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        <path d="M27 31V55C27 59 29 61 32 61C35 61 37 59 37 55V31" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
-        <circle cx="32" cy="51" r="3" stroke="currentColor" stroke-width="3"/>
+      <svg class="opener-icon" viewBox="0 0 96 48" aria-hidden="true" fill="none">
+        <path 
+          d="M14 24C14 14.6 21.6 7 31 7H74C80.6 7 86 12.4 86 19V29C86 35.6 80.6 41 74 41H31C21.6 41 14 33.4 14 24Z" 
+          stroke="currentColor" 
+          stroke-width="4" 
+          stroke-linejoin="round"
+        />
+        <circle 
+          cx="31" 
+          cy="24" 
+          r="7" 
+          stroke="currentColor" 
+          stroke-width="4"
+        />
+        <path 
+          d="M57 17H75C78 17 79.6 20.5 77.6 22.7L71 30H57" 
+          stroke="currentColor" 
+          stroke-width="4" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+        />
+        <path 
+          d="M62 30H75" 
+          stroke="currentColor" 
+          stroke-width="4" 
+          stroke-linecap="round"
+        />
       </svg>
 
       <div class="brand-text">
@@ -495,10 +497,6 @@
           en sus eventos.
         </p>
 
-        <div class="hero-note">
-          No somos un catering de comida: nos centramos en la barra, las bebidas y el servicio de camareros.
-        </div>
-
         <div class="buttons">
           <a class="btn primary" href="#contacto">Pedir presupuesto</a>
           <a class="btn secondary" href="#servicio">Ver servicio</a>
@@ -506,11 +504,33 @@
       </div>
 
       <div class="logo-card">
-        <svg class="opener-icon" viewBox="0 0 64 64" aria-hidden="true" fill="none">
-          <path d="M23 4H41C47.6 4 53 9.4 53 16C53 24.3 46.3 31 38 31H26C17.7 31 11 24.3 11 16C11 9.4 16.4 4 23 4Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M24 16C25.8 20.2 28.5 22.3 32 22.3C35.5 22.3 38.2 20.2 40 16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-          <path d="M27 31V55C27 59 29 61 32 61C35 61 37 59 37 55V31" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
-          <circle cx="32" cy="51" r="3" stroke="currentColor" stroke-width="3"/>
+        <svg class="opener-icon" viewBox="0 0 96 48" aria-hidden="true" fill="none">
+          <path 
+            d="M14 24C14 14.6 21.6 7 31 7H74C80.6 7 86 12.4 86 19V29C86 35.6 80.6 41 74 41H31C21.6 41 14 33.4 14 24Z" 
+            stroke="currentColor" 
+            stroke-width="4" 
+            stroke-linejoin="round"
+          />
+          <circle 
+            cx="31" 
+            cy="24" 
+            r="7" 
+            stroke="currentColor" 
+            stroke-width="4"
+          />
+          <path 
+            d="M57 17H75C78 17 79.6 20.5 77.6 22.7L71 30H57" 
+            stroke="currentColor" 
+            stroke-width="4" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"
+          />
+          <path 
+            d="M62 30H75" 
+            stroke="currentColor" 
+            stroke-width="4" 
+            stroke-linecap="round"
+          />
         </svg>
 
         <h2>Camareros<br>Camocha</h2>
@@ -524,8 +544,8 @@
 
       <p class="section-intro">
         Nos encargamos de aportar camareros responsables y organizados para que el evento funcione
-        de forma cómoda. Podemos atender una barra, servir bebidas, apoyar durante una comida o cena
-        y encargarnos de la gestión de bebidas para caterings que quieran externalizar esa parte del servicio.
+        de forma cómoda. Podemos atender una barra, servir bebidas, dar servicio durante una comida o cena
+        y encargarnos de la gestión de bebidas para caterings que quieran externalizar esa parte del evento.
       </p>
 
       <div class="grid">
@@ -635,11 +655,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="notice">
-        Importante: no ofrecemos comida ni menú cerrado. Podemos encargarnos del personal de barra,
-        bebidas y camareros, pero no sustituimos a un catering gastronómico.
       </div>
     </section>
 
