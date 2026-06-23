@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Camareros Camocha | Servicio de barra para eventos en Madrid</title>
+  <title>Camareros Camocha | Barra, bebidas y camareros en Madrid</title>
 
   <style>
     :root {
@@ -37,7 +38,7 @@
     header {
       width: 100%;
       padding: 22px 8%;
-      background: rgba(247, 243, 234, 0.92);
+      background: rgba(247, 243, 234, 0.94);
       backdrop-filter: blur(10px);
       display: flex;
       justify-content: space-between;
@@ -60,6 +61,7 @@
       width: 38px;
       height: 38px;
       flex-shrink: 0;
+      color: var(--verde);
     }
 
     .brand-text {
@@ -75,9 +77,13 @@
     nav a {
       text-decoration: none;
       color: var(--verde-oscuro);
-      margin-left: 26px;
+      margin-left: 24px;
       font-size: 15px;
       font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--verde);
     }
 
     .hero {
@@ -102,18 +108,29 @@
     }
 
     .hero h1 {
-      font-size: 62px;
+      font-size: 60px;
       line-height: 1.05;
       color: var(--verde-oscuro);
       margin-bottom: 24px;
-      max-width: 760px;
+      max-width: 780px;
     }
 
     .hero p {
       font-size: 20px;
       color: #3d3d3d;
-      max-width: 650px;
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .hero-note {
+      display: inline-block;
+      background: var(--verde-claro);
+      color: var(--verde-oscuro);
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 700;
       margin-bottom: 34px;
+      font-size: 15px;
     }
 
     .buttons {
@@ -160,6 +177,7 @@
       width: 92px;
       height: 92px;
       margin-bottom: 28px;
+      color: white;
     }
 
     .logo-card h2 {
@@ -203,7 +221,7 @@
     .section-intro {
       color: var(--gris);
       font-size: 19px;
-      max-width: 760px;
+      max-width: 780px;
       margin-bottom: 42px;
     }
 
@@ -211,6 +229,10 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .card {
@@ -267,7 +289,7 @@
     .highlight-box p {
       color: rgba(255,255,255,0.82);
       font-size: 18px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .list {
@@ -299,6 +321,16 @@
     .process-inner {
       max-width: 1200px;
       margin: auto;
+    }
+
+    .notice {
+      background: var(--verde-claro);
+      border-left: 5px solid var(--verde);
+      padding: 26px;
+      border-radius: 18px;
+      margin-top: 34px;
+      color: var(--verde-oscuro);
+      font-weight: 700;
     }
 
     .contact {
@@ -373,7 +405,8 @@
         font-size: 46px;
       }
 
-      .grid {
+      .grid,
+      .grid.two {
         grid-template-columns: 1fr;
       }
 
@@ -421,216 +454,263 @@
       }
     }
   </style>
+
 </head>
 
 <body>
 
   <header>
     <a class="brand" href="#">
-      <svg class="opener-icon" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M18 8C13.5 8 10 11.5 10 16C10 23 16 28 24 28H40C48 28 54 23 54 16C54 11.5 50.5 8 46 8C40 8 38 14 32 14C26 14 24 8 18 8Z" fill="#0b4a45"/>
-        <rect x="26" y="26" width="12" height="28" rx="6" fill="#0b4a45"/>
-        <circle cx="32" cy="47" r="3" fill="#f7f3ea"/>
+      <svg class="opener-icon" viewBox="0 0 64 64" aria-hidden="true" fill="none">
+        <rect x="25" y="8" width="14" height="48" rx="7" stroke="currentColor" stroke-width="4"/>
+        <path d="M21 8H43C47.5 8 51 11.5 51 16C51 24 44.5 30 36 30H28C19.5 30 13 24 13 16C13 11.5 16.5 8 21 8Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M24 18C26 21 28.5 22.5 32 22.5C35.5 22.5 38 21 40 18" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="32" cy="46" r="3" stroke="currentColor" stroke-width="3"/>
       </svg>
 
-      <div class="brand-text">
-        <span>Camareros</span>
-        <span>Camocha</span>
-      </div>
-    </a>
+```
+  <div class="brand-text">
+    <span>Camareros</span>
+    <span>Camocha</span>
+  </div>
+</a>
 
-    <nav>
-      <a href="#servicio">Servicio</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#como-funciona">Cómo funciona</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+<nav>
+  <a href="#servicio">Servicio</a>
+  <a href="#clientes">Clientes</a>
+  <a href="#no-somos-catering">Qué ofrecemos</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+```
+
   </header>
 
   <main>
 
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Servicio de barra para eventos privados</div>
+```
+<section class="hero">
+  <div>
+    <div class="eyebrow">Barra · Bebidas · Camareros</div>
 
-        <h1>Camareros para que tú solo te preocupes de disfrutar.</h1>
+    <h1>Servicio de camareros y barra para eventos privados y caterings.</h1>
 
-        <p>
-          En Camareros Camocha ofrecemos servicio de barra y camareros para fiestas,
-          reuniones familiares y eventos privados en Madrid. Un trato cercano, serio
-          y cuidado, sin complicarte con un catering completo.
-        </p>
+    <p>
+      En Camareros Camocha ofrecemos personal de barra, servicio de bebidas y camareros
+      para fiestas privadas, reuniones familiares y eventos en Madrid. También colaboramos
+      con caterings que necesiten refuerzo de personal para sus servicios.
+    </p>
 
-        <div class="buttons">
-          <a class="btn primary" href="#contacto">Pedir presupuesto</a>
-          <a class="btn secondary" href="#servicio">Ver servicio</a>
-        </div>
-      </div>
+    <div class="hero-note">
+      No somos un catering de comida: nos centramos en el servicio de barra, bebidas y camareros.
+    </div>
 
-      <div class="logo-card">
-        <svg class="opener-icon" viewBox="0 0 64 64" aria-hidden="true">
-          <path d="M18 8C13.5 8 10 11.5 10 16C10 23 16 28 24 28H40C48 28 54 23 54 16C54 11.5 50.5 8 46 8C40 8 38 14 32 14C26 14 24 8 18 8Z" fill="#ffffff"/>
-          <rect x="26" y="26" width="12" height="28" rx="6" fill="#ffffff"/>
-          <circle cx="32" cy="47" r="3" fill="#0b4a45"/>
-        </svg>
+    <div class="buttons">
+      <a class="btn primary" href="#contacto">Pedir presupuesto</a>
+      <a class="btn secondary" href="#servicio">Ver servicio</a>
+    </div>
+  </div>
 
-        <h2>Camareros<br>Camocha</h2>
-        <div class="logo-line"></div>
-        <p>Barra · Eventos · Confianza</p>
-      </div>
-    </section>
+  <div class="logo-card">
+    <svg class="opener-icon" viewBox="0 0 64 64" aria-hidden="true" fill="none">
+      <rect x="25" y="8" width="14" height="48" rx="7" stroke="currentColor" stroke-width="4"/>
+      <path d="M21 8H43C47.5 8 51 11.5 51 16C51 24 44.5 30 36 30H28C19.5 30 13 24 13 16C13 11.5 16.5 8 21 8Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M24 18C26 21 28.5 22.5 32 22.5C35.5 22.5 38 21 40 18" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="32" cy="46" r="3" stroke="currentColor" stroke-width="3"/>
+    </svg>
 
-    <section id="servicio">
-      <h2 class="section-title">Servicio sencillo, cuidado y cercano.</h2>
+    <h2>Camareros<br>Camocha</h2>
+    <div class="logo-line"></div>
+    <p>Servicio serio, cercano y flexible</p>
+  </div>
+</section>
 
-      <p class="section-intro">
-        No somos un catering de comida. Nos centramos en lo que muchas veces falta
-        en un evento pequeño o mediano: una barra bien atendida, camareros responsables
-        y un servicio cómodo para los invitados.
-      </p>
+<section id="servicio">
+  <h2 class="section-title">Un servicio pensado para cubrir la parte de barra y atención.</h2>
 
-      <div class="grid">
-        <div class="card">
-          <span>1</span>
-          <h3>Servicio de barra</h3>
-          <p>
-            Atendemos la barra durante el evento, servimos bebidas, mantenemos el orden
-            y ayudamos a que los invitados estén bien atendidos.
-          </p>
-        </div>
+  <p class="section-intro">
+    Nos encargamos de aportar camareros responsables y organizados para que el evento funcione
+    de forma cómoda. Podemos atender una barra, servir bebidas, apoyar durante una comida o cena
+    y reforzar equipos de catering cuando haga falta personal adicional.
+  </p>
 
-        <div class="card">
-          <span>2</span>
-          <h3>Camareros para reuniones</h3>
-          <p>
-            Si no necesitas una barra completa, también podemos ofrecer camareros para
-            apoyar en comidas, cenas, celebraciones familiares o encuentros privados.
-          </p>
-        </div>
-
-        <div class="card">
-          <span>3</span>
-          <h3>Trato profesional</h3>
-          <p>
-            Somos jóvenes, cercanos y con experiencia en caterings. Cuidamos la imagen,
-            la educación y la organización durante todo el servicio.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="eventos">
-      <div class="split">
-        <div class="highlight-box">
-          <h2>Para eventos donde no hace falta montar un gran catering.</h2>
-          <p>
-            Pensado para personas que organizan algo en casa, en una finca, en una terraza,
-            en una reunión familiar o en una celebración con amigos.
-          </p>
-          <p>
-            Nos adaptamos al tamaño del evento y al tipo de servicio que necesites.
-          </p>
-        </div>
-
-        <div class="list">
-          <div class="list-item">
-            <div class="check">✓</div>
-            <div>
-              <h3>Fiestas privadas</h3>
-              <p>Celebraciones en casa, jardín, finca o local privado.</p>
-            </div>
-          </div>
-
-          <div class="list-item">
-            <div class="check">✓</div>
-            <div>
-              <h3>Reuniones familiares</h3>
-              <p>Comidas, cenas, cumpleaños, aniversarios o encuentros especiales.</p>
-            </div>
-          </div>
-
-          <div class="list-item">
-            <div class="check">✓</div>
-            <div>
-              <h3>Eventos pequeños y medianos</h3>
-              <p>Eventos cuidados, sin necesidad de contratar un servicio enorme.</p>
-            </div>
-          </div>
-
-          <div class="list-item">
-            <div class="check">✓</div>
-            <div>
-              <h3>Servicio flexible</h3>
-              <p>Barra completa o simplemente camareros de apoyo según el evento.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="como-funciona" class="process">
-      <div class="process-inner">
-        <h2 class="section-title">Cómo funciona</h2>
-
-        <p class="section-intro">
-          Queremos que contratar el servicio sea fácil. Nos cuentas qué necesitas,
-          vemos disponibilidad y te damos una propuesta sencilla.
-        </p>
-
-        <div class="grid">
-          <div class="card">
-            <span>1</span>
-            <h3>Nos cuentas el evento</h3>
-            <p>
-              Fecha, lugar, número aproximado de personas, horario y si necesitas barra,
-              camareros o ambas cosas.
-            </p>
-          </div>
-
-          <div class="card">
-            <span>2</span>
-            <h3>Preparamos la propuesta</h3>
-            <p>
-              Te indicamos disponibilidad, número de camareros recomendado y presupuesto
-              orientado al tipo de servicio.
-            </p>
-          </div>
-
-          <div class="card">
-            <span>3</span>
-            <h3>Nos encargamos del servicio</h3>
-            <p>
-              Llegamos al evento, nos organizamos y atendemos la barra o a los invitados
-              con seriedad y buen trato.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto" class="contact">
-      <h2>¿Tienes un evento en Madrid?</h2>
-
+  <div class="grid">
+    <div class="card">
+      <span>1</span>
+      <h3>Servicio de barra</h3>
       <p>
-        Escríbenos y cuéntanos qué estás organizando. Te responderemos con disponibilidad
-        y una propuesta adaptada al evento.
+        Atendemos la barra durante el evento, servimos bebidas, mantenemos el orden
+        y cuidamos que los invitados estén bien atendidos.
       </p>
+    </div>
 
-      <div class="contact-actions">
-        <a class="btn primary" href="mailto:leblicpedro@gmail.com">
-          Enviar email
-        </a>
+    <div class="card">
+      <span>2</span>
+      <h3>Camareros para eventos</h3>
+      <p>
+        Ofrecemos camareros para reuniones familiares, celebraciones privadas,
+        cenas, cumpleaños, fiestas en casa o eventos en finca.
+      </p>
+    </div>
 
-        <a class="btn secondary" href="https://wa.me/34679556292" target="_blank">
-          Escribir por WhatsApp
-        </a>
+    <div class="card">
+      <span>3</span>
+      <h3>Refuerzo para caterings</h3>
+      <p>
+        También colaboramos con empresas de catering que necesiten camareros o personal
+        de barra para completar su equipo en servicios concretos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="clientes">
+  <h2 class="section-title">Trabajamos tanto con particulares como con caterings.</h2>
+
+  <p class="section-intro">
+    Nuestra idea es ser flexibles: podemos ayudar directamente a una familia que organiza
+    una celebración, o servir de apoyo a un catering que necesita personal serio y con experiencia.
+  </p>
+
+  <div class="grid two">
+    <div class="card">
+      <span>A</span>
+      <h3>Para particulares</h3>
+      <p>
+        Si organizas una fiesta, reunión familiar, comida, cena, cumpleaños o evento privado,
+        podemos encargarnos de la barra y del servicio de camareros para que no tengas que estar
+        pendiente de atender a todo el mundo.
+      </p>
+    </div>
+
+    <div class="card">
+      <span>B</span>
+      <h3>Para caterings</h3>
+      <p>
+        Si eres una empresa de catering y necesitas refuerzo puntual de camareros o personal de barra,
+        podemos ayudarte con un equipo cercano, educado y acostumbrado a trabajar en eventos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="no-somos-catering">
+  <div class="split">
+    <div class="highlight-box">
+      <h2>No somos un catering de comida.</h2>
+      <p>
+        Camareros Camocha no prepara menús ni ofrece servicio de cocina. Nuestra especialidad
+        es cubrir la parte de atención, barra, bebidas y apoyo de camareros.
+      </p>
+      <p>
+        Esto nos permite centrarnos en dar un servicio concreto, sencillo y bien ejecutado.
+      </p>
+    </div>
+
+    <div class="list">
+      <div class="list-item">
+        <div class="check">✓</div>
+        <div>
+          <h3>Barra y bebidas</h3>
+          <p>Servicio de barra, preparación básica de copas y atención de bebidas durante el evento.</p>
+        </div>
       </div>
-    </section>
+
+      <div class="list-item">
+        <div class="check">✓</div>
+        <div>
+          <h3>Camareros de apoyo</h3>
+          <p>Personal para servir, recoger, ordenar y ayudar a que el evento fluya mejor.</p>
+        </div>
+      </div>
+
+      <div class="list-item">
+        <div class="check">✓</div>
+        <div>
+          <h3>Eventos pequeños y medianos</h3>
+          <p>Fiestas privadas, reuniones familiares, celebraciones en casa, fincas o espacios privados.</p>
+        </div>
+      </div>
+
+      <div class="list-item">
+        <div class="check">✓</div>
+        <div>
+          <h3>Apoyo a profesionales</h3>
+          <p>Refuerzo para caterings que ya tienen comida y necesitan personal para el servicio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notice">
+    Importante: no ofrecemos comida ni menú cerrado. Podemos encargarnos del personal de barra,
+    bebidas y camareros, pero no sustituimos a un catering gastronómico.
+  </div>
+</section>
+
+<section id="como-funciona" class="process">
+  <div class="process-inner">
+    <h2 class="section-title">Cómo funciona</h2>
+
+    <p class="section-intro">
+      Cuéntanos qué necesitas y preparamos una propuesta sencilla según el tipo de evento,
+      el número de personas, el horario y el servicio que haga falta.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <span>1</span>
+        <h3>Nos cuentas el evento</h3>
+        <p>
+          Fecha, lugar, número aproximado de personas, horario y si necesitas barra,
+          camareros, bebidas o refuerzo para un catering.
+        </p>
+      </div>
+
+      <div class="card">
+        <span>2</span>
+        <h3>Vemos el servicio necesario</h3>
+        <p>
+          Te orientamos sobre el número de camareros recomendado y cómo organizar la barra
+          o el apoyo durante el evento.
+        </p>
+      </div>
+
+      <div class="card">
+        <span>3</span>
+        <h3>Te damos presupuesto</h3>
+        <p>
+          Preparamos una propuesta clara y adaptada al servicio, sin paquetes complicados
+          ni costes innecesarios.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <h2>¿Necesitas camareros o servicio de barra en Madrid?</h2>
+
+  <p>
+    Escríbenos y cuéntanos qué estás organizando. Te responderemos con disponibilidad
+    y una propuesta adaptada a tu evento o catering.
+  </p>
+
+  <div class="contact-actions">
+    <a class="btn primary" href="mailto:leblicpedro@gmail.com">
+      Enviar email
+    </a>
+
+    <a class="btn secondary" href="https://wa.me/34679556292" target="_blank">
+      Escribir por WhatsApp
+    </a>
+  </div>
+</section>
+```
 
   </main>
 
   <footer>
-    <p>© 2026 Camareros Camocha · Servicio de barra y camareros para eventos privados en Madrid</p>
+    <p>© 2026 Camareros Camocha · Barra, bebidas y camareros para eventos privados y caterings en Madrid</p>
   </footer>
 
 </body>
